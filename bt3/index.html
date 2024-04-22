@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Bai tap 3</title>
+    </head>
+    <body>
+        <h1>Guest Reservation</h1>
+        <fieldset>
+            <legend>General Information</legend>
+            <label for="Arrival date">Arrival date:</label>
+            <input type="text" id = "Arrival date" name = "Arrival date"><br>
+            <label for="Nights">Nights:</label>
+            <input type="text" id = "Nights" name = "Nights"><br>
+            Adults: 
+            <select name="Adults">
+                <optgroup label="Group 1">
+                    <option selected value="1">1</option>
+                    <option value="2">2</option>
+                </optgroup>
+                <optgroup label="Group 2">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </optgroup>
+            </select>
+            <br>
+            Children: 
+            <select name="Children">
+                <optgroup label="Group A">
+                    <option selected value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </optgroup>
+                <optgroup label="Group B">
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </optgroup>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Preferences</legend>
+            Room type: 
+            <input type="radio" name="s1" value="Standard" checked> Standard
+            <input type="radio" name="s1" value="Business"> Business
+            <input type="radio" name="s1" value="Suite"> Suite
+            <br>
+            Bed type: 
+            <input type="radio" name="s2" value="King" checked> King
+            <input type="radio" name="s2" value="Double"> Double
+            <br>
+            <input type="checkbox" name="s3" value="Smoking"> Smoking
+        </fieldset>
+        <fieldset>
+            <legend>Contact Information</legend>
+        <form>
+            <label for="Name">Name: </label>
+            <input type="text" id="Name" name="Name">
+            <br>
+            <label for="Email">Email: </label>
+            <input type="email" id="Email" name="Email">
+            <br><label for="Phone">Phone: </label>
+            <input type="tel" id="Phone" name="Phone">
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+
+        </fieldset>
+    </body>
+
+</html>
