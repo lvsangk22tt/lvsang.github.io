@@ -44,9 +44,9 @@ header {
     background-position: center;
     height: 600px;
     position: relative;
-
     display: flex;
     flex-direction: column;
+    justify-items: space-between;
     align-items: center;
     justify-content: center;
 }
@@ -74,22 +74,23 @@ header::before {
     font-weight: 700;
     font-size: .875em;
     padding: 10px 26px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     z-index: 10;
     background-color: rgba(124, 124, 124, 0.9);
 }
 .logo img {
     max-width: 6em;
 }
-
 .links {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-start: 2;
     justify-content: center;
     align-items: center;
     position: relative;
     z-index: 10;
+
 }
 .links a {
     display: block;
@@ -115,7 +116,8 @@ header::before {
 
 @media (max-width: 850px) {
     #toggler-btn {
-        display: block;
+        display: inline;
+        justify-self: end;
     }
     .nav i.bx-menu {
         font-size: 4em;
@@ -213,14 +215,15 @@ section {
 }
 
 .row {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: space-between;
     padding: 100px
 }
 
 @media (max-width: 850px){
     .row {
-        flex-direction: column;
+        grid-template-columns: 100%;
     }
 }
 .row div {
@@ -253,7 +256,8 @@ div.row:nth-child(odd) {
 }
 .contact .row {
     padding: 50px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     width: 100%;
     align-items: center;
     justify-content: space-between;
@@ -309,7 +313,7 @@ div.row:nth-child(odd) {
 }
 @media (max-width: 1024px) {
     .contact .row {
-        flex-direction: column;
+        grid-template-columns: 100%;
     }
     .contact .row iframe{
         width: 100%;
