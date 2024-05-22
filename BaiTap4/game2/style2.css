@@ -20,7 +20,7 @@ body {
     body {
         font-size: 12px;
     }
-}
+} 
 p {
     line-height: 2.25;
 }
@@ -32,20 +32,21 @@ a:hover {
     color: rgb(113, 182, 9);
 }
 header {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .links {
-    display: grid;
-    grid-template-columns: repeat(14, 1fr);
+    display: flex;
+    text-align: center;
+    position: relative;
+    flex-wrap: wrap;
     z-index: 10;
 }
 .links a {
     display: block;
     text-align: center;
-    margin: 5px;
+    margin: 15px;
     color: rgb(113, 182, 9);
 }
 .links a:hover {
@@ -129,7 +130,6 @@ h1 {
         font-size: 4em;
     }
 }
-
 .main {
     text-align: center;
     margin: 20px;
@@ -138,15 +138,16 @@ h1 {
     margin-top: 6em;
 }
 .row {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: space-between;
     padding: 100px;
+    
 }
 @media (max-width: 850px) {
     .row {
-        grid-template-columns: 100%;
+        flex-direction: column;
     }
-}
+} 
 .row img {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -155,6 +156,11 @@ h1 {
 .row p {
     background-color: rgb(247, 247, 0);
     display: inline;
+}
+.row div {
+    flex-basis: 45%;
+    flex-grow: 1;
+    padding: 20px;
 }
 div.row:nth-child(odd) {
     background-color: rgba(65, 125, 75, 0.1);
