@@ -54,6 +54,11 @@ header {
     background-size: cover;
     border-radius: 5px;
 }
+.nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    z-index: 10;
+}
 .nav a{
     color: rgb(72, 72, 249);
     font-weight: bold;
