@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgba(26, 26, 26, .7);
+    font-family: 'Nunito', 'Lora', serif;
+    font-size: 16px;
+}
+@media (max-width: 900px){
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 550px){
+    body {
+        font-size: 12px;
+    }
+}
+p {
+    line-height: 2.25;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+a:hover {
+    color: rgb(113, 182, 9);
+}
+header {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 150px;
+}
+.links {
+    display: grid;
+    grid-template-columns: repeat(14, 1fr);
+    z-index: 10;
+}
+.links a {
+    display: block;
+    text-align: center;
+    margin: 5px;
+    color: rgb(113, 182, 9);
+}
+.links a:hover {
+    color: white;
+    background-color: rgb(113, 182, 9);
+    background-size: cover;
+    border-radius: 5px;
+}
+.nav a{
+    color: rgb(113, 182, 9);
+    font-weight: bold;
+}
+h1 {
+    color: rgb(113, 182, 9);
+    margin-bottom: 10px;
+}
+.nut {
+    text-align: center;
+}
+.button {
+    color: aliceblue;
+    background-color: rgb(113, 182, 9);
+    padding: 10px 15px;
+    border-radius: 100px;
+    border: 0;
+    cursor: pointer;
+    transform: 0.5 linear;
+    font-weight: bold;
+    margin: auto
+}
+.button:hover{
+    color: white;
+    background-color: rgb(27, 103, 226);
+}
+#menu-toggler, #toggler-btn, .nav i.bx-x {
+    display: none;
+    cursor: pointer;
+}
+@media (max-width: 850px) {
+    #toggler-btn {
+        display: block;
+    }
+    .nav i.bx-menu {
+        font-size: 4em;
+        display: block;
+    }
+    .links {
+        display: block;
+        position: fixed;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        top: 69px;
+        background: rgba(124, 124, 124, 0.9);
+        transition: 0.3s ease;
+        font-size: 1.5em;
+    }
+    .links a {
+        margin: 50px 200px;
+    }
+    #menu-toggler:checked ~ .links {
+        right: 0;
+    }
+    #menu-toggler:checked ~ #toggler-btn i.bx-menu {
+        display: none;
+    }
+    #menu-toggler:checked ~ #toggler-btn i.bx-x {
+        display: block;
+        font-size: 4em;
+    }
+}
+
+.main {
+    text-align: center;
+    margin: 20px;
+}
+.rows {
+    margin-top: 6em;
+}
+.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 100px;
+}
+@media (max-width: 850px) {
+    .row {
+        grid-template-columns: 100%;
+    }
+}
+.row img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
+}
+.row p {
+    background-color: rgb(247, 247, 0);
+    display: inline;
+}
+div.row:nth-child(odd) {
+    background-color: rgba(65, 125, 75, 0.1);
+}
+footer {
+    background-color: rgb(113, 182, 9);
+    color: rgba(255, 255, 255, .8);
+    padding: 5px;
+    text-align: center;
+}
+footer p {
+    color: rgba(255, 255, 255, .4);
+}
