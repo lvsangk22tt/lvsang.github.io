@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+body {
+    font-family: 'Nunito', 'Lora', serif;
+}
+.h1 {
+    background-color: rgba(15, 47, 225, 0.523);
+    text-align: center;
+    padding: 30px;
+}
+h1 {
+    color: white;
+    font-weight:bold;
+}
+.thanh {
+    display: flex;
+    justify-content: center;
+}
+#en {
+    width: 900px;
+    height: 40px;
+    border: none;
+    outline: none ;
+    padding-left: 10px;
+}
+#but {
+    width: 200px;
+    border: none;
+    outline: none ;
+    background-color:gainsboro;
+    font-weight: bold;
+}
+.thanh2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: gainsboro;
+    margin-top: 10px;
+    height: 40px;
+    padding-left: 10px;
+    font-weight: bold;
+    
+}
+#but2 {
+    border: none;
+    background-color: gainsboro;
+    font-weight: bold;
+}
+#sp {
+    align-content: center;
+}
